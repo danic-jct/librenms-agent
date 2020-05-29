@@ -264,7 +264,7 @@ foreach my $line ( @disks ){
 	if ( $disk !~ /\// ){
 		$disk = '/dev/'.$disk;
 	}
-	$output=`$smartctl -A $disk`;
+	$output=`$smartctl -A -s on $disk`;
 	my %IDs=( '5'=>'null',
 			  '10'=>'null',
 			  '173'=>'null',
